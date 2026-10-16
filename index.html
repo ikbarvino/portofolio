@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portofolio Vino</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 75px;
+      }
+
+      body {
+        background: #0b1120;
+        color: #e2e8f0;
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        background: #111c30;
+        box-shadow: 0 3px 15px #0005;
+      }
+
+      .navbar-brand {
+        color: #22d3ee;
+        font-weight: bold;
+      }
+
+      .navbar .nav-link {
+        color: #cbd5e1;
+        transition: 0.3s;
+      }
+
+      .navbar .nav-link:hover {
+        color: #22d3ee;
+      }
+
+      .navbar-toggler {
+        border-color: #22d3ee;
+      }
+
+      .navbar-toggler-icon {
+        filter: invert(1);
+      }
+
+      /* HOME */
+      #sopo {
+        background: linear-gradient(135deg, #111c30, #164e63);
+        padding-top: 110px;
+        padding-bottom: 60px;
+      }
+
+      #sopo img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #22d3ee;
+        box-shadow: 0 0 25px #22d3ee40;
+      }
+
+      #sopo h2 {
+        color: #f8fafc;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+
+      #sopo h5 {
+        color: #67e8f9;
+      }
+
+      /* ABOUT */
+      #naga {
+        background: #0f172a;
+        color: #cbd5e1;
+      }
+
+      #naga h3,
+      #cacing h3 {
+        color: #22d3ee;
+        letter-spacing: 2px;
+      }
+
+      #naga hr,
+      #sapi hr {
+        width: 100px;
+        margin: 15px auto 30px;
+        border: 2px solid #22d3ee;
+        opacity: 1;
+      }
+
+      #naga .container1 .col-md-6 {
+        font-weight: normal;
+        line-height: 1.9;
+      }
+
+      /* PROJECTS */
+      #cacing {
+        background: #111c30;
+      }
+
+      #cacing h3 {
+        margin-bottom: 35px;
+      }
+
+      #cacing .card {
+        height: 100%;
+        background: #1e293b;
+        color: #e2e8f0;
+        border: 1px solid #334155;
+        border-radius: 14px;
+        overflow: hidden;
+        transition: 0.3s;
+      }
+
+      #cacing .card:hover {
+        transform: translateY(-7px);
+        border-color: #22d3ee;
+        box-shadow: 0 10px 25px #0005;
+      }
+
+      #cacing .card-img-top {
+        height: 300px;
+        object-fit: cover;
+        border-bottom: 2px solid #22d3ee;
+      }
+
+      #cacing .card-body {
+        background: #1e293b;
+      }
+
+      #cacing .card-body .text-dark {
+        color: #67e8f9 !important;
+      }
+
+      #cacing .card-body .text-muted {
+        color: #cbd5e1 !important;
+        line-height: 1.8;
+      }
+
+      /* CONTACT */
+      #sapi {
+        background: #0f172a !important;
+      }
+
+      #sapi h2 {
+        color: #22d3ee !important;
+        letter-spacing: 2px;
+      }
+
+      #sapi .col-md-6 {
+        background: #1e293b !important;
+        border: 1px solid #334155;
+        box-shadow: 0 8px 25px #0003;
+      }
+
+      #sapi .form-label {
+        color: #e2e8f0;
+        font-weight: 600;
+      }
+
+      #sapi .form-control {
+        background: #0f172a;
+        border: 1px solid #475569;
+        color: #f8fafc;
+        border-radius: 8px;
+        padding: 11px 14px;
+      }
+
+      #sapi .form-control::placeholder {
+        color: #94a3b8;
+      }
+
+      #sapi .form-control:focus {
+        background: #0f172a;
+        color: #fff;
+        border-color: #22d3ee;
+        box-shadow: 0 0 0 0.2rem #22d3ee26;
+      }
+
+      #sapi .btn-outline-secondary {
+        color: #22d3ee;
+        border-color: #22d3ee;
+        border-radius: 8px;
+        padding: 11px;
+        font-weight: 600;
+      }
+
+      #sapi .btn-outline-secondary:hover {
+        background: #22d3ee;
+        color: #0b1120;
+        border-color: #22d3ee;
+      }
+
+      /* FOOTER */
+      footer {
+        background: #080d18;
+        border-top: 2px solid #22d3ee;
+      }
+
+      footer h5 {
+        font-size: 15px;
+        margin-bottom: 0;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 767px) {
+        #naga .container1 .col-md-6 {
+          padding: 0 20px;
+        }
+
+        #sapi .col-md-6 {
+          padding: 25px;
+        }
+
+        #cacing .card:hover {
+          transform: translateY(-3px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#sopo">
+          <i class="bi bi-person-fill"></i> Vino
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Buka navigasi"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#sopo">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#naga">About</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cacing">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sapi">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HOME -->
+    <section id="sopo" class="py-5">
+      <div class="container py-4">
+        <div class="row g-4 align-items-center">
+          <div class="col text-center">
+            <img
+              src="WhatsApp Image 2026-10-16 at 12.43.10.jpeg"
+              class="img-fluid"
+              alt="Foto profil"
+            />
+          </div>
+          <div class="col-12 text-center">
+            <h2>Ikbar Mukti Alvino</h2>
+            <h5>Mechatronics Engineering</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="naga" class="py-5">
+      <div class="container text-center">
+        <h3 class="fw-bold">ABOUT ME</h3>
+        <hr />
+        <div class="container1">
+          <div class="row">
+            <div class="text-start col-md-6">
+              <p>
+                Saya merupakan siswa jurusan Teknik Mekatronika di SMK SMTI
+                Yogyakarta yang memiliki minat besar dalam bidang otomasi
+                industri dan robotika. Saya memiliki keterampilan dasar dalam
+                perancangan sistem kelistrikan, pengoperasian sistem pneumatik,
+                pengelasan, serta pemrograman mikrokontroler. Dengan
+                menggabungkan pengetahuan mekanik, elektronik, dan sistem
+                kontrol, saya terus mengembangkan kemampuan teknis dan
+                pengalaman praktis untuk memahami serta menerapkan teknologi
+                otomasi dalam dunia industri.
+              </p>
+            </div>
+
+            <div class="text-start col-md-6">
+              <p>
+                Selain memiliki keterampilan teknis, saya juga mampu beradaptasi
+                dengan cepat, berpikir analitis dalam menyelesaikan masalah,
+                serta bekerja sama secara efektif dalam tim. Melalui pengalaman
+                praktik di laboratorium dan bengkel sekolah, saya terbiasa
+                menghadapi tantangan teknis dan menerapkan pengetahuan yang
+                telah dipelajari. Saya berkomitmen untuk terus mengembangkan
+                kompetensi, mengikuti perkembangan teknologi, serta
+                berkontribusi dalam penerapan otomasi dan peningkatan efisiensi
+                proses industri.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="cacing" class="py-5">
+      <div class="container">
+        <h3 class="fw-bold text-center">MY PROJECTS</h3>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://inca-construction.co.id/wp-content/uploads/2025/10/Teknik-Pengelasan-1-1536x1024.png"
+                class="card-img-top"
+                alt="Pengelasan"
+              />
+              <div class="card-body">
+                <p class="text-dark fs-5 fw-semibold">Pengelasan</p>
+                <p class="card-text text-muted">
+                  Praktik penggabungan material logam menggunakan teknik las
+                  listrik untuk membuat kerangka dan struktur mesin mekatronika
+                  yang kokoh, presisi, serta memenuhi standar keamanan industri.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://tse4.mm.bing.net/th/id/OIP.bNN-OvfRdF3gwvbc3FEatAHaEO?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                class="card-img-top"
+                alt="Bubut dan Milling"
+              />
+              <div class="card-body">
+                <p class="text-dark fs-5 fw-semibold">Bubut</p>
+                <p class="card-text text-muted">
+                  Mengoperasikan mesin perkakas konvensional untuk melakukan
+                  pemotongan, pembentukan, dan pemesinan komponen mekanik sesuai
+                  dengan toleransi dan dimensi teknis pada gambar kerja.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="WhatsApp Image 2026-09-25 at 07.34.08.jpeg"
+                class="card-img-top"
+                alt="Pneumatik"
+              />
+              <div class="card-body">
+                <p class="text-dark fs-5 fw-semibold">Pneumatik</p>
+                <p class="card-text text-muted">
+                  Perancangan dan perakitan sistem kontrol berbasis tekanan
+                  udara (pneumatik/elektropneumatik) untuk menggerakkan aktuator
+                  otomatis pada jalur produksi dan otomatisasi industri.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="WhatsApp Image 2026-10-16 at 12.14.36.jpeg"
+                class="card-img-top"
+                alt="Teknik Listrik"
+              />
+              <div class="card-body">
+                <p class="text-dark fs-5 fw-semibold">Teknik Listrik</p>
+                <p class="card-text text-muted">
+                  Merangkai dan memelihara panel kontrol kelistrikan, sistem
+                  instalasi tenaga, serta pengamanan arus listrik untuk
+                  menunjang operasional mesin-mesin industri modern secara aman.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://i.ytimg.com/vi/FHHNyqoJEWQ/maxresdefault.jpg"
+                class="card-img-top"
+                alt="Kerja Bangku"
+              />
+              <div class="card-body">
+                <p class="text-dark fs-5 fw-semibold">Kerja Bangku</p>
+                <p class="card-text text-muted">
+                  Keterampilan dasar pemesinan manual seperti mengikir,
+                  mengetap, memotong, dan mengukur untuk membentuk komponen
+                  presisi tinggi dengan tingkat kerapian yang optimal.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="WhatsApp Image 2026-09-25 at 08.13.17.jpeg"
+                class="card-img-top"
+                alt="Mikrokontroler"
+              />
+              <div class="card-body">
+                <p class="text-dark fs-5 fw-semibold">Mikrokontroler</p>
+                <p class="card-text text-muted">
+                  Pemrograman papan mikrokontroler dan perakitan rangkaian
+                  elektronik interaktif dengan sensor serta aktuator untuk
+                  membangun sistem tertanam (embedded system) yang cerdas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="sapi" class="py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold mt-1 mb-3">CONTACT ME</h2>
+        <hr />
+
+        <div class="row justify-content-center">
+          <div class="col-md-6 p-5 rounded-4">
+            <form>
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nama"
+                  placeholder="Nama Anda"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="contoh@gmail.com"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea
+                  class="form-control"
+                  id="pesan"
+                  rows="4"
+                  placeholder="Tuliskan pesan Anda"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="button" class="btn btn-outline-secondary w-100">
+                <i class="bi bi-send-fill"></i> Kirim pesan
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="p-4">
+      <div class="container text-center">
+        <h5 class="fw-semibold text-light">
+          &copy; Ikbar Mukti Alvino | SMK SMTI Yogyakarta
+        </h5>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
